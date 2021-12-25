@@ -27,9 +27,9 @@
     <div>
       <h3 class="float-md-start mb-0"><img  class="logo" src="/img/logo_febrero.png" />  Fdez Febrero</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        <a class="nav-link" aria-current="page" href="fdezfebrero.es">Inicio</a>
         <a class="nav-link" href="https://javier.fdezfebrero.es">Javier</a>
-        <!--<a class="nav-link" href="#">Contact</a>-->
+        <a class="nav-link active" href="/pages/contact.php">Contacto</a>
       </nav>
     </div>
   </header>
@@ -55,6 +55,7 @@
     <label for="">Mensaxe</label>
     <textarea class="form-control" id="" name="mensaxe" rows="3"></textarea>
   </div>
+  <br>
 
   <button type="submit" class="btn btn-primary mb-2" name="enviarMensaxe">Enviar</button>
 </form>
