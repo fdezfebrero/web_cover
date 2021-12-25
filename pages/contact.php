@@ -57,11 +57,11 @@
   </div>
   <br>
 
-  <button type="submit" class="btn btn-primary mb-2" name="enviarMensaxe">Enviar</button>
+  <button type="submit" class="btn btn-primary mb-2">Enviar</button>
 </form>
 
 <?php
-    if($_POST['enviarMensaxe']) {
+    if($_POST) {
         $nome = "";
         $mail = "";
         $asunto = "";
