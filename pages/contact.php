@@ -29,51 +29,77 @@
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link active" aria-current="page" href="#">Inicio</a>
         <a class="nav-link" href="https://javier.fdezfebrero.es">Javier</a>
-        <a class="nav-link" href="/pages/contact.php">Contacto</a>
+        <!--<a class="nav-link" href="#">Contact</a>-->
       </nav>
     </div>
   </header>
 
-  <main class="px-3 color">
-    <h1>Bo Nadal e</h1>
-    <h1>Feliz 2022</h1>
-    <p class="lead"></p>
-   <!-- <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-    </p>-->
-  </main>
-  
-  <div id="carouselEx" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselEx" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselEx" data-slide-to="1"></li>
-      <li data-target="#carouselEx" data-slide-to="2"></li>
-      <li data-target="#carouselEx" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item">
-        <img class="d-block w-100 bordes" src="/img/navidad-5.png" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100 bordes" src="/img/navidad-2.jpg" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100 bordes" src="/img/navidad-4.jpg" alt="...">
-      </div>
-      <div class="carousel-item active">
-        <img class="d-block w-100 bordes" src="/img/navidad-7.png" alt="...">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselEx" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only"></span>
-    </a>
-    <a class="carousel-control-next" href="#carouselEx" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only"></span>
-    </a>
+  <form action="contact.php" method="POST">
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="email" class="form-control" name="email" id="" placeholder="name@example.com">
   </div>
 
+
+  <div class="form-group">
+    <label for="">Nome</label>
+    <input type="email" class="form-control" name="nome" id="" placeholder="Nome">
+  </div>
+
+  <div class="form-group">
+    <label for="">Asunto</label>
+    <input type="email" class="form-control" name="asunto" id="" placeholder="Asunto">
+  </div>
+  
+  <div class="form-group">
+    <label for="">Mensaxe</label>
+    <textarea class="form-control" id="" name="mensaxe" rows="3"></textarea>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<?php
+    if($_POST) {
+        $nome = "";
+        $mail = "";
+        $asunto = "";
+        $mensaxe = "";
+         
+        if(isset($_POST['nome'])) {
+          $nome = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
+        }
+         
+        if(isset($_POST['email'])) {
+            $mail = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
+            $mail = filter_var($mail, FILTER_VALIDATE_EMAIL);
+        }
+         
+        if(isset($_POST['asunto'])) {
+            $asunto = filter_var($_POST['asunto'], FILTER_SANITIZE_STRING);
+        }
+         
+        if(isset($_POST['mansaxe'])) {
+            $mensaxe = htmlspecialchars($_POST['mensaxe']);
+        }
+       
+        $mailContacto="javier@fdezfebrero.es";
+         
+        $headers  = 'MIME-Version: 1.0' . "\r\n"
+        .'Content-type: text/html; charset=utf-8' . "\r\n"
+        .'From: ' . $mail . "\r\n";
+         
+        if(mail($mailContacto, $asunto, $mensaxe, $headers)) {
+            echo "<p>Grazas por poñerte en contacto con nós, $nome. Responderemosche pronto.</p>";
+        } else {
+            echo '<p>Algo saíu mal o enviar a mensaxe, por favor intentao de novo.</p>';
+        }
+         
+    } else {
+        echo '<p>Algo saíu mal.</p>';
+    }
+
+?>
   
 
   <footer class="mt-auto">
