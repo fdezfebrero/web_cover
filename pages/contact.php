@@ -27,7 +27,7 @@
     <div>
       <h3 class="float-md-start mb-0"><img  class="logo" src="/img/logo_febrero.png" />  Fdez Febrero</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link" aria-current="page" href="fdezfebrero.es">Inicio</a>
+        <a class="nav-link" aria-current="page" href="https://www.fdezfebrero.es">Inicio</a>
         <a class="nav-link" href="https://javier.fdezfebrero.es">Javier</a>
         <a class="nav-link active" href="/pages/contact.php">Contacto</a>
       </nav>
