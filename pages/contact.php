@@ -43,12 +43,12 @@
 
   <div class="form-group">
     <label for="">Nome</label>
-    <input type="email" class="form-control" name="nome" id="" placeholder="Nome">
+    <input type="text" class="form-control" name="nome" id="" placeholder="Nome">
   </div>
 
   <div class="form-group">
     <label for="">Asunto</label>
-    <input type="email" class="form-control" name="asunto" id="" placeholder="Asunto">
+    <input type="text" class="form-control" name="asunto" id="" placeholder="Asunto">
   </div>
   
   <div class="form-group">
@@ -56,11 +56,11 @@
     <textarea class="form-control" id="" name="mensaxe" rows="3"></textarea>
   </div>
 
-  <button type="submit">Enviar</button>
+  <button type="submit" class="btn btn-primary mb-2" name="enviarMensaxe">Enviar</button>
 </form>
 
 <?php
-    if($_POST) {
+    if($_POST['enviarMensaxe']) {
         $nome = "";
         $mail = "";
         $asunto = "";
@@ -95,8 +95,6 @@
             echo '<p>Algo saíu mal o enviar a mensaxe, por favor intentao de novo.</p>';
         }
          
-    } else {
-        echo '<p>Algo saíu mal.</p>';
     }
 
 ?>
