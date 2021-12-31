@@ -1,5 +1,7 @@
+//variables
 
-
+oscuro= '<i class="bi bi-moon-fill"></i>';
+claro='<i class="bi bi-sun-fill"></i>';
 
 function cambiarModo(){
     var meuStorage = window.localStorage;
@@ -17,7 +19,7 @@ function cambiarModo(){
             var cuerpoweb = document.body; 
             cuerpoweb.classList.toggle("claro"); 
             meuStorage.setItem('modoPaxina', 'light');
-            document.getElementById('modoPaxina').innerHTML="Modo Oscuro";
+            document.getElementById('modoPaxina').innerHTML=claro;
             
             
         }else{
@@ -25,7 +27,7 @@ function cambiarModo(){
             var cuerpoweb = document.body; 
             cuerpoweb.classList.toggle("oscuro"); 
             meuStorage.setItem('modoPaxina', 'dark');
-            document.getElementById('modoPaxina').innerHTML="Modo Claro";
+            document.getElementById('modoPaxina').innerHTML=oscuro;
         }
 
         
@@ -48,11 +50,11 @@ function comprobarModo() {
         if (existe == 'dark') {
             var cuerpoweb = document.body; 
             cuerpoweb.classList.toggle("oscuro"); 
-            document.getElementById('modoPaxina').innerHTML="Modo Claro";  
+            document.getElementById('modoPaxina').innerHTML=claro;  
         }else{
             var cuerpoweb = document.body; 
             cuerpoweb.classList.toggle("claro"); 
-            document.getElementById('modoPaxina').innerHTML="Modo Oscuro";
+            document.getElementById('modoPaxina').innerHTML=oscuro;
         }
 
         
