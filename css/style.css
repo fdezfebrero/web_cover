@@ -84,3 +84,17 @@ a{
   text-decoration: none;
   color: darkgoldenrod;
 }
+
+
+.oscuro {
+  text-shadow: 0 .05rem .1rem rgba(255, 255, 255, .5);
+  box-shadow: inset 0 0 5rem rgba(184, 134, 11, .2);
+  background-color: rgba(61, 59, 59, 0.979);
+  color: white;
+}
+.claro {
+  text-shadow: 0 .05rem .1rem rgba(255, 255, 255, .5);
+  box-shadow: inset 0 0 5rem rgba(184, 134, 11, .2);
+  background-color: #fff0f3;
+  color: black;
+}
