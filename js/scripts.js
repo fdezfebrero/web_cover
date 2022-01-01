@@ -64,3 +64,9 @@ function comprobarModo() {
     
     
 }
+
+function olvidandoCousas() {
+
+        document.getElementById('cookies-ff').innerHTML="";
+    
+}
