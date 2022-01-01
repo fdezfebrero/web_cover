@@ -8,7 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <script src="/js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -23,7 +23,7 @@
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-white">
+  <body class="d-flex h-100 text-center text-white" onload="comprobarModo()">
     
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column color">
   <header class="mb-auto">
