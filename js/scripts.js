@@ -70,3 +70,8 @@ function olvidandoCousas() {
         document.getElementById('cookies-ff').innerHTML="";
     
 }
+
+function comprobarIdioma(){
+   lang = navigator.language || navigator.userlanguages ;
+   return lang; 
+}
