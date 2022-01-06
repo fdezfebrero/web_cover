@@ -106,7 +106,7 @@
   
 
   <footer class="mt-auto">
-    <p>© 2021 Copyright: Creada por <a href="https://javier.fdezfebrero.es"> Javier Fernández Febrero</a></p>
+    <p>© 2021 Copyright: Creada por <a href="https://javier.fdezfebrero.es"> ハビエル</a></p>
   </footer>
 </div>
 
