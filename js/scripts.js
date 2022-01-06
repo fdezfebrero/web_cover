@@ -75,3 +75,25 @@ function comprobarIdioma(){
    lang = navigator.language || navigator.userlanguages ;
    return lang; 
 }
+
+function comprobarCookies() {
+    var meuStorage = window.localStorage;
+    var existe;
+
+    for (let i = 0; i < meuStorage.length; i++) {
+        if ('cookies' == meuStorage.key(i)) {
+            existe = meuStorage.getItem('cookies');
+        }
+    }
+
+    if (existe){
+        document.getElementById('cookie-banner').style='display: none;';
+    }
+    
+}
+
+function aceptarCookies(){
+    var meuStorage = window.localStorage;
+    meuStorage.setItem('cookies', 'si');
+    document.getElementById('cookie-banner').style='display: none;';
+}
